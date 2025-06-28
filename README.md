@@ -26,11 +26,11 @@
 
 ```bash
 # Using create-next-app (Recommended)
-npx create-next-app@latest my-admin-dashboard --example "https://github.com/rashidmp/next-admin-template"
+npx create-next-app@latest --example "https://github.com/rashidmp/next-admin-template"
 
 # Or clone repository
-git clone https://github.com/rashidmp/next-admin-template.git my-admin-dashboard
-cd my-admin-dashboard && npm install
+git clone https://github.com/rashidmp/next-admin-template.git [your-project-name]
+cd [your-project-name] && npm install
 ```
 
 ### Development
@@ -44,16 +44,16 @@ npm run dev
 
 ```
 src/
-├── app/                    # Next.js App Router
-│   ├── (auth)/            # Authentication routes
-│   ├── (sidebar)/         # Dashboard routes
-│   └── globals.css        # Global styles
-├── components/            # Reusable components
-│   ├── ui/               # ShadCN UI components
-│   ├── sidebar/          # Navigation components
-│   └── common/           # Shared components
-├── config/               # App configuration
-├── constants/            # Navigation & constants
+├── app/                 # Next.js App Router
+│   ├── (auth)/          # Authentication routes
+│   ├── (sidebar)/       # Dashboard routes
+│   └── globals.css      # Global styles
+├── components/          # Reusable components
+│   ├── ui/              # ShadCN UI components
+│   ├── sidebar/         # Navigation components
+│   └── common/          # Shared components
+├── config/              # App configuration
+├── constants/           # Navigation & constants
 ├── hooks/               # Custom React hooks
 ├── lib/                 # Utilities
 └── types/               # TypeScript definitions
