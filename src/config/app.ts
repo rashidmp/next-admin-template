@@ -2,7 +2,10 @@ export const APP_CONFIG = {
   name: 'Next Admin',
   description: 'Next Admin Template',
   version: '1.0.0',
-  author: 'Rashid MP',
+  author: {
+    name: 'Rashid MP',
+    url: 'https://github.com/rashidmp',
+  },
 
   // Theme and UI settings
   theme: {
@@ -15,6 +18,11 @@ export const APP_CONFIG = {
   navigation: {
     showQuickCreate: true,
     collapsibleSidebar: true,
+  },
+
+  siteHeader: {
+    defaultTitle: 'Dashboard',
+    showGitHubLink: true,
   },
 } as const;
 

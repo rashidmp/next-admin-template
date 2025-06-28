@@ -3,6 +3,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { APP_CONFIG } from "@/config/app";
 import { Toaster } from "@/components/ui/sonner";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const fontSans = DM_Sans({
   variable: "--font-sans",
@@ -20,10 +21,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${fontSans.variable} font-sans antialiased`}>
-        {children}
-        <Toaster richColors />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <Toaster richColors />
+        </ThemeProvider>
       </body>
     </html>
   );
