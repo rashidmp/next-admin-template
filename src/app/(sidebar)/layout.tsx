@@ -15,21 +15,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main>
-      <SidebarProvider
-        style={
-          {
-            "--sidebar-width": theme.sidebarWidth,
-            "--header-height": theme.headerHeight,
-          } as React.CSSProperties
-        }
-      >
-        <AppSidebar variant="floating" />
-        <SidebarInset>
-          <SiteHeader />
-          <main>{children}</main>
-        </SidebarInset>
-      </SidebarProvider>
-    </main>
+    <SidebarProvider
+      style={
+        {
+          "--sidebar-width": theme.sidebarWidth,
+          "--header-height": theme.headerHeight,
+        } as React.CSSProperties
+      }
+    >
+      <AppSidebar variant="floating" />
+      <SidebarInset>
+        <SiteHeader />
+        <main className="p-6">{children}</main>
+      </SidebarInset>
+    </SidebarProvider>
   );
 }
