@@ -1,16 +1,15 @@
-import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
-import "./globals.css";
-import { APP_CONFIG } from "@/config/app";
-import { Toaster } from "@/components/ui/sonner";
+import type { Metadata } from 'next';
+import { DM_Sans } from 'next/font/google';
+import './../globals.css';
+import { APP_CONFIG } from '@/config/app';
 
 const fontSans = DM_Sans({
-  variable: "--font-sans",
-  subsets: ["latin"],
+  variable: '--font-sans',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: APP_CONFIG.name,
+  title: `${APP_CONFIG.name} | Login`,
   description: APP_CONFIG.description,
 };
 
@@ -22,8 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${fontSans.variable} font-sans antialiased`}>
-        {children}
-        <Toaster richColors />
+        <main className="h-screen w-screen flex items-center justify-center">{children}</main>
       </body>
     </html>
   );
