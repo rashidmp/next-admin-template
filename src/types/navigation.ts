@@ -13,7 +13,7 @@ export interface UserProfile {
 }
 
 export interface SidebarData {
-  user: UserProfile;
+  demoUser: UserProfile;
   navMain: NavItem[];
   navSecondary: NavItem[];
   admin: NavItem[];

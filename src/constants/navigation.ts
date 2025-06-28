@@ -2,45 +2,30 @@ import {
   IconDashboard,
   IconDatabase,
   IconFileText,
-  IconHelp,
-  IconListDetails,
-  IconPhoneCall,
-  IconSearch,
+  IconHelp, IconSearch,
   IconSettings,
-  IconUserPlus,
-  IconUsers,
+  IconUserPlus
 } from '@tabler/icons-react';
 import type { SidebarData } from '@/types/navigation';
 import { APP_CONFIG } from '@/config/app';
 
 export const SIDEBAR_DATA: SidebarData = {
-  user: {
+  demoUser: {
     name: 'John Doe',
     email: 'john@company.com',
     avatar: '/avatars/default.jpg',
   },
+
+  // main navigation for all users
   navMain: [
     {
       title: 'Dashboard',
       url: '/dashboard',
       icon: IconDashboard,
     },
-    {
-      title: 'Enquiries',
-      url: '/enquiries',
-      icon: IconUsers,
-    },
-    {
-      title: 'Follow-ups',
-      url: '/follow-ups',
-      icon: IconListDetails,
-    },
-    {
-      title: 'Call Register',
-      url: '/call-register',
-      icon: IconPhoneCall,
-    },
   ],
+
+  // only admin can see this navigation
   admin: [
     {
       title: 'Data Management',
@@ -58,6 +43,8 @@ export const SIDEBAR_DATA: SidebarData = {
       icon: IconUserPlus,
     },
   ],
+
+  // secondary navigation for all users
   navSecondary: [
     {
       title: 'Settings',
