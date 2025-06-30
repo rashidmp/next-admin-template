@@ -92,7 +92,6 @@ export const SIDEBAR_DATA: SidebarData = {
 
 ```typescript
 // src/app/(sidebar)/products/page.tsx
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 export default function ProductsPage() {
